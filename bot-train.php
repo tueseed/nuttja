@@ -22,9 +22,9 @@ function reply_msg($text,$replyToken)//สร้างข้อความแ�
 }
 
 // รับข้อมูล
-$content = file_get_contents('php://input');
-$events = json_decode($content, true);
-if (!is_null($events['events'])) 
+$content = file_get_contents('php://input');//รับข้อมูลจากไลน์
+$events = json_decode($content, true);//แปลง json เป็น php
+if (!is_null($events['events'])) //check ค่าในตัวแปร $events
 {
     foreach ($events['events'] as $event) 
     {
@@ -34,7 +34,7 @@ if (!is_null($events['events']))
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
             $lineid = $event['source']['userId'];//เก็บ UID
             $txt11 = "ว่างัยลูกพี่";
-            reply_msg($txt11,$replyToken);//เรียกใช้ function
+            reply_msg($lineid,$replyToken);//เรียกใช้ function
         }
     }
 }
