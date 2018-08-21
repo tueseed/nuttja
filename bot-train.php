@@ -6,7 +6,7 @@ function reply_msg($text,$replyToken)//สร้างข้อความแ�
     $url = 'https://api.line.me/v2/bot/message/reply';
     $data = [
                 'replyToken' => $replyToken,
-                'messages' => [$messages],
+                'messages' => $messages
             ];
     $post = json_encode($data);
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
@@ -33,7 +33,10 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
             $lineid = $event['source']['userId'];//เก็บ UID
-            if($txtin == "สวัสดีตอนเช้า"){$txtrp="Good Morning";}
+            if($txtin == "สวัสดีตอนเช้า")
+            {
+                $txtrp="Good Morning";
+            }
             reply_msg($txtrp,$replyToken);//เรียกใช้ function
         }
     }
