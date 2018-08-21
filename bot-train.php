@@ -32,12 +32,8 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
         {
             $replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-            $lineid = $event['source']['userId'];//เก็บ UID
-            if($txtin == "สวัสดีตอนเช้า")
-            {
-                $txtrp="Good Morning";
-            }
-            reply_msg($txtrp,$replyToken);//เรียกใช้ function
+            //$lineid = $event['source']['userId'];//เก็บ UID
+            reply_msg($replyToken,$replyToken);//เรียกใช้ function
         }
     }
 }
