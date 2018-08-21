@@ -33,7 +33,8 @@ if (!is_null($events['events']))
             $replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
             $lineid = $event['source']['userId'];//เก็บ UID
-            reply_msg($txtin,$replyToken);//เรียกใช้ function
+            $txt11 = "ว่างัยลูกพี่";
+            reply_msg($txt11,$replyToken);//เรียกใช้ function
         }
     }
 }
