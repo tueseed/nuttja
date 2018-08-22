@@ -41,7 +41,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				$sql_area = "SELECT * FROM tdd01.3_report WHERE Area = '$office_id'";
 				$query_area = mysqli_query($conn,$sql_area);
 				$num_row = mysqli_num_rows($query_area);// นับจำนวนที่หาเจอ
-				reply_msg($num_row,$replyToken);//เรียกใช้ function
+				reply_msg($office_id,$replyToken);//เรียกใช้ function
 				break;
 			}
          /*ลงทะเบียนกลุ่ม*/   
