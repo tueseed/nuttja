@@ -18,7 +18,7 @@ if($method == "POST")
 			$speech ="1234570";
 			break;
 	}
-	$response->speech = "1234567";
+	$response->fulfillmentText = "1234567";
 	$response->displayText = "234564";
 	$response->source = "webkook";
 	echo json_encode($response);	
