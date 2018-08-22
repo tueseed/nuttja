@@ -6,7 +6,19 @@ if($method == "POST")
 	$json = json_decode($requestBody);
 	$text = $json->result->parameters->text;
 	$response = new \stdClass();
-	$response->speech = "hi....";
+	switch($text)
+	{
+		case 'hi':
+			$speech = "HI MY NAME STD.."
+			break;
+		case 'bye':
+			$speech = "Good Bye..";
+			break;
+		default:
+			$speech ="1234570";
+			break;
+	}
+	$response->speech = "";
 	$response->displayText = "";
 	$response->source = "webkook";
 	echo json_encode($response);	
