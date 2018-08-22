@@ -44,7 +44,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				$textsend = "ค้นพบ ".$num_row." รายการ\n";
 				while($obj = mysqli_fetch_array($query_area))
 				{
-					$txtsend = $txtsend ."\n".$obj["area"];
+					$txtsend = $txtsend ."\n".$obj["oper"];
 				}
 				reply_msg($txtsend,$replyToken);//เรียกใช้ function
 				break;
