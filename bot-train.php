@@ -41,7 +41,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				$sql_area = "SELECT * FROM tbl_tdd WHERE area = '".$office_id."'";
 				$query_area = mysqli_query($conn,$sql_area);
 				$num_row = mysqli_num_rows($query_area);// นับจำนวนที่หาเจอ
-				$textsend = "ค้นพบ ".$num_row." รายการ\n";
+				$txtsend = "ค้นพบ ".$num_row." รายการ\n";
 				while($obj = mysqli_fetch_array($query_area))
 				{
 					$txtsend = $txtsend ."\n".$obj["oper"];
