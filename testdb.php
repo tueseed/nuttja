@@ -4,6 +4,6 @@ $sql_office = "SELECT * FROM tbl_office";
 $query_office = mysqli_query($conn,$sql_office);
 while($obj = mysqli_fetch_array($query_office))
 {
-	echo $obj["office_name"]." ".$obj["office"]."<br>";
+	echo "ชื่อการไฟฟ้า ".$obj["office_name"]." รหัสการไฟฟ้า ".$obj["office"]."<br>";
 }
 ?>
