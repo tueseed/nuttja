@@ -27,7 +27,7 @@ while($obj = mysqli_fetch_array($query))
     echo $obj["office_name"]."<br>";
 
 }*/
-$group_id ="C890100d5c30d58e3d79a2b18a9d77b6a";
+$group_id ="Ccd9652f5c7325dac8f78719ec74d6be0";
 push_msg($group_id);
 
 ?>
