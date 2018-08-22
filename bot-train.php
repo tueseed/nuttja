@@ -38,7 +38,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 			if($first_char == "@")
 			{
 				$office_id = substr($txtin,1,3);///ได้รหัสการไฟฟ้า 
-				$sql_area = "SELECT * FROM tdd01.3_report WHERE area = '$office_id'";
+				$sql_area = "SELECT * FROM tdd01.3_report WHERE area = '".$office_id."'";
 				$query_area = mysqli_query($conn,$sql_area);
 				$num_row = mysqli_num_rows($query_area);// นับจำนวนที่หาเจอ
 				reply_msg($num_row,$replyToken);//เรียกใช้ function
