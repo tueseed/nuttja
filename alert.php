@@ -1,5 +1,5 @@
 <?php
-function push_msg()
+function push_msg($group_id)
 {  
     //$access_token = 'ZP+VUHsKMsZL45YWEXAeX7xIuij8//+W38Hqee/U2nyYzCF+v1fbJx78yNrsKAVFJJ7BcZfl1+0fkL66TzZV0FtBf/PpBbuqGmilCwK5+NE1TjEeHwV90c7SsIV6TfMlNlaGIcIzhIVkeRnBUrwygwdB04t89/1O/w1cDnyilFU=';
 	$access_token = 'REGnVB/OI7mwsa9/5EQOtchj3pUn47bh7sknrm1X+pUs+mbYG/33SqFGogTb/FU6ii3A/3r2ERT+DQGQZ6B/92ofjUMJiQYWx65sVDO5PqG1h9dM3M0hrYgcBy1ZjJ6nIaUjjoSH9smAIhRYY5FU+wdB04t89/1O/w1cDnyilFU=';
@@ -7,7 +7,7 @@ function push_msg()
     'text' => 'ทดสอบ PUSH จ้า'
     ];
     $url = 'https://api.line.me/v2/bot/message/push';
-    $data = ['to' => $obj_group['group_id'],'messages' => [$messages]];
+    $data = ['to' => $group_id,'messages' => [$messages]];
     $post = json_encode($data);
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
     $ch = curl_init($url);
