@@ -9,7 +9,7 @@ if($method == "POST")
 	switch($text)
 	{
 		case 'hi':
-			$speech = "HI MY NAME STD.."
+			$speech = "HI MY NAME STD..";
 			break;
 		case 'bye':
 			$speech = "Good Bye..";
